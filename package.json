@@ -1,0 +1,44 @@
+{
+  "name": "sprang-bitarray",
+  "version": "1.0.0",
+  "description": "bit array implementation",
+  "main": "build/bitarray.js",
+  "module": "es/bitarray.js",
+  "typings": "build/bitarray.d.ts",
+  "dependencies": {
+    "es6-shim": "^0.35.4",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.39",
+    "@types/lodash": "^4.14.118",
+    "release-it": "^8.4.2",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "pretest": "npm run compile",
+    "test": "testem",
+    "compile": "npm run compile-es && npm run compile-commonjs",
+    "compile-es": "tsc --outDir es --module es6 --moduleResolution node",
+    "compile-commonjs": "tsc --outDir ./build",
+    "prepublishOnly": "npm run compile",
+    "release-major": "release-it major",
+    "release-minor": "release-it minor",
+    "release-patch": "release-it",
+    "release-test": "release-it --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astroK8/sprang-bitarray.git"
+  },
+  "keywords": [
+    "bit",
+    "array"
+  ],
+  "author": "Aymeric Trotignon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astroK8/sprang-bitarray/issues"
+  },
+  "homepage": "https://github.com/astroK8/sprang-bitarray#readme"
+}
