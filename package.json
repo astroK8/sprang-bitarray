@@ -1,6 +1,6 @@
 {
   "name": "sprang-bitarray",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bit array implementation",
   "main": "build/bitarray.js",
   "module": "es/bitarray.js",
